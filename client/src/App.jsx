@@ -23,7 +23,7 @@ function App() {
   return (
     <>
           
-      <BrowserRouter>
+      <BrowserRouter basename="/resolve-net">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -31,5 +31,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: client/build  # If using Vite instead of CRA, change this to client/dist
+          folder: client/dist  
           branch: gh-pages
