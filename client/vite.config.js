@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
+
   plugins: [react()],
-  base: '/resolve-net/', // <-- ADD THIS LINE
+
+  base:
+    process.env.NODE_ENV === "production-gh"
+      ? "/resolve-net/"
+      : "/"
+
 })
