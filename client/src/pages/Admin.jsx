@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 import Navbar from "../components/Navbar";
 
 function Admin() {
@@ -14,7 +13,6 @@ function Admin() {
     users: 0,
   });
 
-  /* FETCH ALL COMPLAINTS */
 
   useEffect(() => {
 
@@ -42,7 +40,6 @@ function Admin() {
 
   };
 
-  /* CALCULATE DASHBOARD STATS */
 
   const calculateStats = (data) => {
 
@@ -68,9 +65,6 @@ function Admin() {
     });
 
   };
-
-  /* UPDATE STATUS */
-
   const updateStatus = async (id, newStatus) => {
 
     try {
@@ -92,7 +86,6 @@ function Admin() {
 
   };
 
-  /* DELETE COMPLAINT */
 
   const deleteComplaint = async (id) => {
 

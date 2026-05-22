@@ -8,6 +8,10 @@ const complaintController = async (req, res) => {
     if (!title || !description || !category) {
         return res.status(400).json({ message: "All fields are required" });
     }
+    let imagePath = ""
+    if(req.file){
+        imagePath = req.file.path; 
+    }
 
     try {
         const complaintId = "CMP-" + nanoid(8);
@@ -16,6 +20,7 @@ const complaintController = async (req, res) => {
             title,
             description,
             category,
+            image: imagePath,
             status: "Pending",
             userId
         });

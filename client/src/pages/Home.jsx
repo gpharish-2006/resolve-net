@@ -22,7 +22,7 @@ function Home() {
               Raise Complaint
             </Link>
 
-            <Link to="/track" className="btn btn-light text-dark fw-bold me-3 px-4">
+            <Link to="/track" className="btn btn-light text-light fw-bold me-3 px-4">
               Track Status
             </Link>
           </div>

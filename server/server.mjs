@@ -16,6 +16,7 @@ app.use(express.json())
 app.use('/api/auth', authRoutes)
 app.use("/api/complaints", complaintRoutes)
 app.use("/api/admin", adminRoutes)
+app.use("/uploads", express.static("uploads"))
 
 mongo();
 
