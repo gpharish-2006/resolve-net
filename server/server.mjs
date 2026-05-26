@@ -7,7 +7,7 @@ import complaintRoutes from './routes/complaintRoutes.mjs';
 import adminRoutes from './routes/adminRoutes.mjs';
 
 dotenv.config();
-// const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -35,8 +35,8 @@ app.get("/",(req,res)=>{
   res.send("Citizen Service API Running");
 });
 
-// app.listen(port, () => {
-//   console.log(`Server running on port ${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 
 export default app;
