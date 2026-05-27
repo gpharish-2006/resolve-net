@@ -14,8 +14,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-    "http://localhost:5173", 
-    "https://resolve-net.vercel.app"
+      process.env.CLIENT_LOCAL_URL,
+      process.env.CLIENT_PROD_URL
   ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
